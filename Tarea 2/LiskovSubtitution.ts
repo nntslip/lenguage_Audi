@@ -13,40 +13,16 @@
   
  /////solucion 
   
- class Aves{ 
-     nombre:string; 
-     constructor(nombre:string){ 
-         this.nombre=nombre; 
-     } 
-  
+ class pajaro{ 
      volar(){ 
          console.log("El pájaro vuela en el cielo"); 
-     } 
-  
-     novolar(){ 
-         throw new Error("Los pinguinos no pueden volar"); 
-     } 
+     }
+ }
+ class pinguino{ 
+     nadar(){ 
+         console.log("El pingüino nada en el agua); 
+     }
  } 
-  
- class Pajaro extends Aves{ 
-     constructor(nombre:string){ 
-         super(nombre); 
-     } 
-     volar(): string { 
-         return ""; 
-     } 
- } 
-  
- class Pinguino extends Aves{ 
-     constructor(nombre:string){ 
-         super(nombre); 
-     } 
-     novolar(): string { 
-         return ""; 
-     } 
- } 
-  
-  
  //example 2 
  class Rectangulo{ 
      alto: number; 
@@ -71,27 +47,12 @@
  } 
   
  /// 
- class Cuadrado extends Rectangulo { 
-  
-     constructor(lado: number) { 
-         super(lado, lado); 
+ class Cuadrado { 
+  lado: number;
+  constructor(lado: number){ 
+         this.lado = alto; 
      } 
-  
-     setAlto(value: number) { 
-         if (value !== this.ancho) { 
-             throw new Error("Los lados del cuadrado deben de ser iguales"); 
-         } 
-  
-         super.setAlto(value); 
-         this.ancho = value; 
+     setLado(value: number) { 
+         this.lado=value; 
      } 
-  
-     setAncho(value: number) { 
-         if (value !== this.alto) { 
-             throw new Error("Los lados del cuadrado deben de ser iguales"); 
-         } 
-  
-         super.setAncho(value); 
-         this.alto = value; 
-     } 
-     }
+ }
